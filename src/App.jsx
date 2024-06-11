@@ -1,13 +1,21 @@
 import React from 'react'
-
+import {Route,Routes} from 'react-router-dom'
+import Navbar from './components/Navbar'
+import About from './Pages/About';
+import Requests from './Pages/Requests';
+import Userdetails from './Pages/Userdetails';
+ 
 const App = () => {
   return (
-    <div >
-      <div className='shadow-md'>
-      <h1 className='text-center p-3 border font-semibold text-2xl uppercase'>WeatherApp Api</h1>
-      </div>
-      
-    </div>
+    <>
+      <Navbar/>
+
+      <Routes>
+        <Route path='/about' element={<About/>}/>
+        <Route path='/requests' element={<Requests/>}/>
+        <Route path='/:username' element={<Userdetails/>}/>
+      </Routes>
+    </>
   )
 }
 

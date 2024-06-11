@@ -4,9 +4,3 @@
 @tailwind components;
 @tailwind utilities;
 
-
-body
-{
-  font-family: 'Rampart One',cursive;
-  /* background-color: #B397D6; */
-}
